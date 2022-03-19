@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inventory_page.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto+Mono&family=Supermercado+One&display=swap');
+        </style>
+    <title>Inventory Page</title>
+</head>
+<body>
+    <div class="first_div">
+    <div class="add_crate">
+        <p class="top_buttons">Add Crate</p>
+        <a href="#"><img src="{{ url_for('static', filename='images/plus-circle-outline.svg') }}" alt="add_icon" id="add_icon"></a>
+    </div>
+    <div class="pdf">
+        <p class="top_buttons">Generate PDF</p>
+    </div>
+    </div>
+
+    <div class="totals">
+        <div class="produce">
+            <p>TOTAL PRODUCE</p>
+            <p>{{ total_produce }}</p>
+        </div>
+        <div class="produce">
+            <p>TOTAL CRATES ADDED</p>
+            <p>{{ total_produce }}</p>
+        </div>
+        <div class="produce">
+            <p>TOTAL CRATES REMOVED</p>
+        </div>
+    </div>
+
+    <div class="inventory_table">
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Date In</th>
+                <th>Date Out</th>
+                <th>Number Added</th>
+                <th>Action</th>
+            </tr>
+            {% for val in data %}
+            <tr>
+                <td>{{ val['No'] }}</td>
+                <td>{{ val['data'][0] }}</td>
+                <td>{{ val['data'][2] }}</td>
+                <td>{{ val['data'][3] }}</td>
+                <td>{{ val['data'][1] }}</td>
+                <td>Action</td>
+            </tr>
+            {% endfor %}
+
+
+
+        </table>
+    </div>
+
+</body>
+</html>

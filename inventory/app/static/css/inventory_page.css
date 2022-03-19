@@ -1,0 +1,59 @@
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.first_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add_crate {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.totals {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.produce{
+        border: 1px solid;
+        width: 226px;
+        text-align: center;
+        /*height: 90px;*/
+        margin-bottom: 25px;
+        border-radius: 5px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 25px;
+}
+
+table, td, th {
+    border: 1px solid;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    font-family: 'Hubballi', cursive;
+    font-size: 25px;
+}
+
+.top_buttons {
+    border: 0.5px solid;
+    border-radius: 4px;
+    font-family: 'Hubballi', cursive;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 8px;
+}
+
+#add_icon {
+    width: 42px;
+    height: 42px;
+}

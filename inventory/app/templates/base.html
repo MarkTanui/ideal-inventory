@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% if title %}
+        <title>{{ title }} - inventory</title>
+        {% else %}
+        <title>invntory</title>
+        {% endif %}
+
+    </head>
+    <body>
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>
